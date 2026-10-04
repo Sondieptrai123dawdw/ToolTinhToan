@@ -115,7 +115,7 @@ def compute_rows(measured, angles, L, ccw, inv, tol_pos, tol_ang):
     inv_x, inv_y, inv_a = inv
     rows = []
     for i, (ax, ay, k1, k2, draw_x, draw_y, d_target) in enumerate(measured):
-        err_x, err_y = ax - draw_x, ay - draw_y
+        err_x, err_y = draw_x - ax, draw_y - ay
         err_a = float(np.degrees(np.arctan((k1 - k2) / L)))
         mx, my = rotate_to_machine(-err_x, -err_y, angles[i], ccw)
         ma = -err_a
