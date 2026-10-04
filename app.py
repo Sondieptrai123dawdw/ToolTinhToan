@@ -281,7 +281,7 @@ if pdf_bytes is not None:
 with st.form("form_bu_tru"):
     h_title, h_axis = st.columns([2.15, 1.0], vertical_alignment="center")
     with h_title:
-        st.markdown("**Thông số mục tiêu & thực tế theo vị trí**")
+        st.markdown("**Tool được tạo by Nguyễn Đức Sơn**")
     with h_axis:
         st.markdown(
 '<div style="display: flex; justify-content: center; align-items: center;">'
@@ -304,10 +304,10 @@ with st.form("form_bu_tru"):
     
     for i, box in enumerate(containers):
         with box:
-            st.markdown(f"**🎯 Mục tiêu bản vẽ {i + 1}**")
+            st.markdown(f"**🎯 Kích thước bản vẽ {i + 1}**")
             c_t1, c_t2 = st.columns(2)
-            draw_x = c_t1.number_input("KT bản vẽ X", value=1.67, format="%.3f", key=f"draw_x_{i}_{mode}")
-            draw_y = c_t2.number_input("KT bản vẽ Y", value=1.89, format="%.3f", key=f"draw_y_{i}_{mode}")
+            draw_x = c_t1.number_input("KT bản vẽ chiều X", value=1.67, format="%.3f", key=f"draw_x_{i}_{mode}")
+            draw_y = c_t2.number_input("KT bản vẽ chiều Y", value=1.89, format="%.3f", key=f"draw_y_{i}_{mode}")
             d_target = st.number_input("KT bản vẽ góc (KT1 & KT2)", value=1.89, format="%.3f", key=f"d_target_{i}_{mode}")
 
             st.markdown(f"**📏 Số đo thực tế vị trí {i + 1}**")
